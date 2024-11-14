@@ -31,6 +31,10 @@ public class TinderAiBackendApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {	//this is method implemented by CommandLineRunner which runs when the app is up
+
+		profileRepository.deleteAll();
+		conversationRepository.deleteAll();
+
 		Profile profile = new Profile(
 				"1",
 				"Koushik",
@@ -43,6 +47,18 @@ public class TinderAiBackendApplication implements CommandLineRunner{
 				"INTP"
 		);
 		profileRepository.save(profile);
+
+		profile = new Profile(
+				"2",
+				"Foo",
+				"Bar",
+				40,
+				"Indian",
+				Gender.MALE,
+				"Software programmer",
+				"foo.jpg",
+				"INTP"
+		);
 		profileRepository.findAll().forEach(System.out::println);	//now we can see the profile details when we run the app
 
 		Conversation conversation = new Conversation(
