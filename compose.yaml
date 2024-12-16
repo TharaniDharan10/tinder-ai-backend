@@ -2,12 +2,12 @@
   mongodb:
     image: 'mongo:latest'
     environment:
-      - 'MONGO_INITDB_DATABASE=mydatabase'
+      - 'MONGO_INITDB_DATABASE=tinder-ai-database'
       - 'MONGO_INITDB_ROOT_PASSWORD=secret'
       - 'MONGO_INITDB_ROOT_USERNAME=root'
     ports:
-      - '27017'
-  ollama:
-    image: 'ollama/ollama:latest'
-    ports:
-      - '11434'
+      - "27017:27017"
+#  ollama:
+#    image: 'ollama/ollama:latest'
+#    ports:
+#      - '11434'

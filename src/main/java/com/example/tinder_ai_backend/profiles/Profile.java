@@ -1,6 +1,6 @@
 package com.example.tinder_ai_backend.profiles;
 
-public record Profile(
+public record   Profile(
         String id,
         String firstName,
         String lastName,
@@ -12,4 +12,5 @@ public record Profile(
         String myersBriggsPersonalityType
 
 ) {
+
 }
